@@ -8,7 +8,53 @@
 - **Methods** define the behaviours or actions an object can perform.
 - **Getters** & **Setters** are used to access and modify private attributes.
 
+### 💡 Basic Example:
+
 ```java
+// Person.java
+
+public class Person {
+    // define attributes
+    String name;
+    int age;
+    char gender;
+    boolean married;
+
+    // create constructor
+    public Person(String name, int age, char gender, boolean married) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.married = married;
+    }
+
+    // create methods:
+    public void introduce() {
+        String isMarried = married ? "Married" : "Unmarried";
+        String myGender = gender == 'm' || gender == 'M'  ? "Male" : "Female";
+        System.out.println("Hello, I am " + this.name + " and " + this.age + " years old. My gender is " + myGender + " and I am " + isMarried);
+    }
+}
+```
+```java
+// Main.java
+
+public class Main {
+    public static void main(String[] args) {
+
+Person person = new Person("John Doe", 27, 'M', true);
+        person.introduce();
+    }
+}
+```
+
+---
+
+### 💡 Example with Getter & Setter methods:
+
+```java
+// Student.java
+
 public class Student {
     
     // 1. Define attributes
@@ -53,9 +99,11 @@ public class Student {
 }
 ```
 
-## ⭐️ Important Notes (Writing Methods for Classes)
+## ⭐️ Important Notes 
+### ℹ️ When Writing Methods for Classes:
+
 ```java
-// Person Class:
+// Person.java
 
 public class Person {
     // define attributes
@@ -71,11 +119,15 @@ public class Person {
     public void introduce(String name, int Age) {
         ("Hello, I am " + name + " and " + age + " years old.")
     }
-    
 }
-    
-// Main Class:
+```
 
+```java
+// Main.java
+
+public class Main {
+    public static void main(String[] args) {  
+        
     // Correct Way:
     Person person = new Person("John Doe", 27);
     person.introduce();
@@ -83,5 +135,7 @@ public class Person {
     // Incorrect Way:
     Person person = new Person();
     person.introduce("John Doe", 27);
+    }
+}
 ```
-
+---
