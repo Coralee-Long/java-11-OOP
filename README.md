@@ -110,6 +110,12 @@ public class Person {
     String name;
     int age;
 
+    // create constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     // Correct way to write the method:
     public void introduce() {
         ("Hello, I am " + this.name + " and " + this.age + " years old.")
