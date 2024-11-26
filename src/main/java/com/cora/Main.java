@@ -27,10 +27,12 @@ public class Main {
         car.startCar();
         car.accelerateCar(10);
 
-        // Person Exercise:
-        Person person = new Person("John Doe", 27, 'M', true );
+        // correct way to do the method:
+        Person person = new Person("John Doe", 27, 'M', true);
         person.introduce();
+
     }
+
 
     public static void printBook(Book book) {
         System.out.println("Title: " + book.title + "Author: " + book.author + "Genre: " + book.genre + "Pages: " + book.pages);

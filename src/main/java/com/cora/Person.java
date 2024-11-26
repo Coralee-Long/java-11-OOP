@@ -23,10 +23,11 @@ public class Person {
         this.married = married;
     }
 
-    // define any methods
+    // correct way to do the method:
     public void introduce() {
         String isMarried = married ? "Married" : "Unmarried";
         String myGender = gender == 'm' || gender == 'M'  ? "Male" : "Female";
-        System.out.println("Hello, I am " + this.name + " and " + this.age + " years old. My gender is " + myGender + "and I am " + isMarried);
+        System.out.println("Hello, I am " + this.name + " and " + this.age + " years old. My gender is " + myGender + " and I am " + isMarried);
     }
+
 }

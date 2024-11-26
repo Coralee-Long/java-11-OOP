@@ -53,3 +53,35 @@ public class Student {
 }
 ```
 
+## ⭐️ Important Notes (Writing Methods for Classes)
+```java
+// Person Class:
+
+public class Person {
+    // define attributes
+    String name;
+    int age;
+
+    // Correct way to write the method:
+    public void introduce() {
+        ("Hello, I am " + this.name + " and " + this.age + " years old.")
+    }
+
+    // Incorrect way to do the method:
+    public void introduce(String name, int Age) {
+        ("Hello, I am " + name + " and " + age + " years old.")
+    }
+    
+}
+    
+// Main Class:
+
+    // Correct Way:
+    Person person = new Person("John Doe", 27);
+    person.introduce();
+    
+    // Incorrect Way:
+    Person person = new Person();
+    person.introduce("John Doe", 27);
+```
+
